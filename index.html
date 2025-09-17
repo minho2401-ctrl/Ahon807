@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AHON 전기 모바일 명함</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AHON LIGHTING</title>
   <style>
-    :root {
-      --bg:#000; --fg:#fff; --accent:#FFD700;
-    }
-    * { box-sizing: border-box; }
     body {
-      margin:0; background:var(--bg); color:var(--fg); font-family: Arial, sans-serif;
-      display:flex; min-height:100dvh; align-items:center; justify-content:center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      text-align: center;
     }
-    .card {
-      width:min(920px, 96vw);
-      display:flex; gap:24px; align-items:center; justify-content:space-between;
-      padding:20px; background:#111; border:1px solid #222; border-radius:18px;
-      box-shadow:0 8px 24px rgba(0,0,0,.35);
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
     }
-    .logoBox { flex:0 0 280px; text-align:center; }
-    .logoBox img {
-      width:100%; max-width:240px; height:auto; border-radius:12px;
-      background:#000; display:block; margin:0 auto;
+    .logo img {
+      width: 150px;
+      margin: 20px 0;
     }
-    .info { flex:1; }
-    .title { font-size:28px; font-weight:800; color:var(--accent); margin:0 0 6px; }
-    .sub    { font-size:14px; opacity:.9; margin:0 0 16px; }
-    .list   { font-size:15px; line-height:1.7; margin:0 0 18px; }
-    .btns   { display:flex; flex-wrap:wrap; gap:10px; }
-    .btn {
-      display:inline-block; padding:12px 16px; border-radius:10px; font-weight:700;
-      background:var(--accent); color:#000; text-decoration:none; font-size:15px;
+    h1 {
+      color: #FFD700;
+      margin: 10px 0;
     }
-    .btn:active { transform:translateY(1px); }
-    /* 모바일에서는 세로 스택 */
-    @media (max-width:700px){
-      .card{ flex-direction:column; text-align:center; }
-      .logoBox{ width:100%; }
-      .btns{ justify-content:center; }
+    .info {
+      margin: 20px 0;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .icons {
+      margin: 30px 0;
+    }
+    .icons a {
+      display: inline-block;
+      margin: 10px 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+    }
+    .icons img {
+      width: 40px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <!-- 로고: 저장소에 올린 파일명 사용 (공백이 있을 경우 URL 인코딩) -->
-    <div class="logoBox">
-      <img src="logo.jpg" alt="AHON 로고" />
+  <div class="container">
+    <!-- 로고 -->
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/minho2401-ctrl/Ahon807/main/ahon_logo.png" alt="AHON Logo">
     </div>
 
-    <section class="info">
-      <h1 class="title">⚡ AHON 전기</h1>
-      <p class="sub">경남 창원 · 김해 · 부산 · 전기/조명 전문</p>
+    <!-- 회사명 -->
+    <h1>AHON LIGHTING</h1>
 
-      <div class="list">
-        ✔ 조명 교체 / LED등 설치<br/>
-        ✔ 누전 점검 / 전기 수리<br/>
-        ✔ 콘센트 / 스위치 / 전선 작업<br/>
-        ✔ 실링팬(천장선풍기) 설치
-      </div>
+    <!-- 정보 -->
+    <div class="info">
+      경남 창원 · 김해 · 부산 전기/조명 전문<br>
+      조명 인테리어 / 전기 설비 / LED 조명 / 실링팬 / 누전
+    </div>
 
-      <div class="btns">
-        <a class="btn" href="tel:01098482477">📞 전화하기</a>
-        <a class="btn" href="https://open.kakao.com/o/sF2zsIoh" target="_blank" rel="noopener">💬 카톡 문의하기</a>
-        <a class="btn" href="https://map.naver.com/p/search/경상남도 김해시 진영읍 장등1로31번길 7" targlet="_blank" rel="noopener">📍 위치 확인</a>
-      </div>
-    </section>
-  </main>
+    <!-- 아이콘 & 링크 -->
+    <div class="icons">
+      <a href="tel:01098482477">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"> 전화하기
+      </a>
+      <a href="https://open.kakao.com/o/sF2zsIoh" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/speech-bubble.png"> 카톡 문의
+      </a>
+      <a href="https://instagram.com/ahon_s2" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"> 인스타그램
+      </a>
+      <a href="https://naver.me/xrE6zXYZ" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"> 위치 확인
+      </a>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      © AHON LIGHTING
+    </footer>
+  </div>
 </body>
 </html>
