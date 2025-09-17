@@ -1,49 +1,71 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AHON 전기 모바일 명함</title>
   <style>
-    body<body>
-  <div style="max-width:500px;margin:20px auto;padding:20px;border:1px solid #ccc;border-radius:10px;text-align:center;">
-    
-    <!-- 로고 이미지 -->
-    <img src="6_Samsung Notes.jpg" alt="AHON 로고" style="width:150px;margin-bottom:15px;">
-
-    <!-- 회사 정보 -->
-    <h2>AHON 전기 / 조명 / 설비</h2>
-    <p>전기설비 · 누전 · 조명 전문</p>
-
-    <!-- 버튼 -->
-    <p><a href="tel:01098482477">📞 전화하기</a></p>
-    <p><a href="https://open.kakao.com/o/sF2zsIoh">💬 카톡 문의하기</a></p>
-    <p><a href="https://map.naver.com/v5/search/경상남도%20김해시%20진영읍%20장등1로31번길%207">📍 위치 확인</a></p>
-  </div>
-</body> { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #000; color: #fff; text-align: center; }
-    .card { padding: 20px; }
-    .logo { font-size: 28px; font-weight: bold; margin-bottom: 10px; color: #FFD700; }
-    .subtitle { font-size: 16px; margin-bottom: 20px; }
-    .services { text-align: left; margin: 0 auto 20px; max-width: 300px; line-height: 1.8; }
-    .btn { display: block; margin: 10px auto; padding: 15px; max-width: 250px; background: #FFD700; color: #000; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 18px; }
-    .btn:hover { background: #ffc107; }
+    :root {
+      --bg:#000; --fg:#fff; --accent:#FFD700;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; background:var(--bg); color:var(--fg); font-family: Arial, sans-serif;
+      display:flex; min-height:100dvh; align-items:center; justify-content:center;
+    }
+    .card {
+      width:min(920px, 96vw);
+      display:flex; gap:24px; align-items:center; justify-content:space-between;
+      padding:20px; background:#111; border:1px solid #222; border-radius:18px;
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+    .logoBox { flex:0 0 280px; text-align:center; }
+    .logoBox img {
+      width:100%; max-width:240px; height:auto; border-radius:12px;
+      background:#000; display:block; margin:0 auto;
+    }
+    .info { flex:1; }
+    .title { font-size:28px; font-weight:800; color:var(--accent); margin:0 0 6px; }
+    .sub    { font-size:14px; opacity:.9; margin:0 0 16px; }
+    .list   { font-size:15px; line-height:1.7; margin:0 0 18px; }
+    .btns   { display:flex; flex-wrap:wrap; gap:10px; }
+    .btn {
+      display:inline-block; padding:12px 16px; border-radius:10px; font-weight:700;
+      background:var(--accent); color:#000; text-decoration:none; font-size:15px;
+    }
+    .btn:active { transform:translateY(1px); }
+    /* 모바일에서는 세로 스택 */
+    @media (max-width:700px){
+      .card{ flex-direction:column; text-align:center; }
+      .logoBox{ width:100%; }
+      .btns{ justify-content:center; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">⚡ AHON 전기 ⚡</div>
-    <div class="subtitle">경남 창원 · 김해 · 부산<br>전기/조명 전문</div>
-
-    <div class="services">
-      ✔ 조명 교체 / LED등 설치<br>
-      ✔ 누전 점검 / 전기 수리<br>
-      ✔ 콘센트 / 스위치 / 전선 작업<br>
-      ✔ 실링팬(천장선풍기) 설치
+  <main class="card">
+    <!-- 로고: 저장소에 올린 파일명 사용 (공백이 있을 경우 URL 인코딩) -->
+    <div class="logoBox">
+      <img src="6_Samsung%20Notes.jpg" alt="AHON 로고" />
     </div>
 
-    <a class="btn" href="tel:01098482477">📞 전화하기</a>
-    <a class="btn" href="https://open.kakao.com/o/sF2zsIoh" target="_blank" rel="noopener">💬 카톡 문의하기</a>
-    <a class="btn" href="https://map.naver.com/p/search/경상남도 김해시 진영읍 장등1로31번길 7" target="_blank" rel="noopener">📍 위치 확인</a>
-  </div>
+    <section class="info">
+      <h1 class="title">⚡ AHON 전기</h1>
+      <p class="sub">경남 창원 · 김해 · 부산 · 전기/조명 전문</p>
+
+      <div class="list">
+        ✔ 조명 교체 / LED등 설치<br/>
+        ✔ 누전 점검 / 전기 수리<br/>
+        ✔ 콘센트 / 스위치 / 전선 작업<br/>
+        ✔ 실링팬(천장선풍기) 설치
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="tel:01098482477">📞 전화하기</a>
+        <a class="btn" href="https://open.kakao.com/o/sF2zsIoh" target="_blank" rel="noopener">💬 카톡 문의하기</a>
+        <a class="btn" href="https://map.naver.com/p/search/경상남도 김해시 진영읍 장등1로31번길 7" target="_blank" rel="noopener">📍 위치 확인</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
