@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AHON LIGHTING</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .logo img {
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+    h1 {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+    h1 span {
+      color: #f4c44e; /* ON 강조 색 */
+    }
+    .info {
+      margin: 20px 0;
+      font-size: 1.1em;
+      line-height: 2;
+    }
+    .info a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .info a:hover {
+      color: #f4c44e;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.95em;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="hero-logo.png" alt="AHON Logo">
+    </div>
+    <h1>AH<span>ON</span> LIGHTING</h1>
+    <div class="info">
+      📞 <a href="tel:01098482477">010-9848-2477</a><br>
+      💬 <a href="https://open.kakao.com/o/sF2zsIoh">카카오톡 문의</a><br>
+      📷 <a href="https://instagram.com/ahon_s2">Instagram @ahon_s2</a><br>
+      📍 <a href="https://map.naver.com/p/search/경남%20김해시%20진영읍%20장등1로31번길%207">경남 김해시 진영읍 장등1로31번길 7</a>
+    </div>
+    <div class="footer">
+      조명 인테리어 / 전기 설비 / LED 조명 / 실링팬 / 누전
+    </div>
+  </div>
+</body>
+</html>
