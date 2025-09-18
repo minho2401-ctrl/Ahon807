@@ -1,94 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AHON LIGHTING</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #fff;
-      text-align: center;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    .logo img {
-      width: 150px;
-      margin: 20px 0;
-    }
-    h1 {
-      color: #FFD700;
-      margin: 10px 0;
-    }
-    .info {
-      margin: 20px 0;
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    .icons {
-      margin: 30px 0;
-    }
-    .icons a {
-      display: inline-block;
-      margin: 10px 20px;
-      text-decoration: none;
-      color: white;
-      font-size: 1em;
-    }
-    .icons img {
-      width: 40px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-    footer {
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AHON LIGHTING</title>
+<style>
+  :root{
+    --bg:#000;--fg:#fff;--gold:#ffc94d;--muted:#bdbdbd;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Pretendard,Apple SD Gothic Neo,Noto Sans KR,sans-serif}
+  .wrap{max-width:1200px;margin:0 auto;padding:24px}
+  .card{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .logo-side{min-height:240px;display:flex;flex-direction:column;justify-content:center}
+  .ahon{font-weight:900;font-size:56px;letter-spacing:1px}
+  .ahon .on{color:var(--gold)}
+  .lighting{font-weight:800;font-size:28px;margin-top:-6px}
+  .services{margin-top:16px;color:var(--fg);opacity:.95;font-size:18px;line-height:1.6}
+  .contact{display:flex;flex-direction:column;gap:14px}
+  .row{display:flex;align-items:center;gap:12px}
+  .icon{width:24px;height:24px;filter:invert(1)}
+  .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:#111;border:1px solid #222;color:#fff;text-decoration:none}
+  .cta span{font-size:18px}
+  .muted{color:var(--muted)}
+  .divider{margin-top:22px;border-top:1px solid #1f1f1f}
+  /* 반응형 */
+  @media (max-width:900px){
+    .card{grid-template-columns:1fr}
+    .ahon{font-size:44px}.lighting{font-size:22px}
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <!-- 로고 -->
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/minho2401-ctrl/Ahon807/main/ahon_logo.png" alt="AHON Logo">
+  <div class="wrap">
+    <div class="card">
+      <!-- 좌측: 로고 쪽(텍스트 로고로 배치) -->
+      <div class="logo-side">
+        <div class="ahon">AH<span class="on">ON</span></div>
+        <div class="lighting">LIGHTING</div>
+
+        <div class="services">
+          조명 인테리어 / 전기 설비 / LED 조명 / 실링팬 / 누전
+        </div>
+      </div>
+
+      <!-- 우측: 연락처 -->
+      <div class="contact">
+        <a class="cta" href="tel:01098482477" aria-label="전화 걸기">
+          <img class="icon" alt="" src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/phone.svg">
+          <span>010 9848 2477</span>
+        </a>
+
+        <a class="cta" href="https://open.kakao.com/o/sF2zsIoh" target="_blank" rel="noopener" aria-label="카카오 오픈채팅">
+          <img class="icon" alt="" src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/message-circle.svg">
+          <span>open.kakao.com/sF2zsIoh</span>
+        </a>
+
+        <a class="cta" href="https://instagram.com/ahon_s2" target="_blank" rel="noopener" aria-label="인스타그램">
+          <img class="icon" alt="" src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/brand-instagram.svg">
+          <span>@ahon_s2</span>
+        </a>
+
+        <a class="cta" href="https://map.naver.com/v5/search/%EA%B2%BD%EB%82%A8%20%EA%B9%80%ED%95%B4%EC%8B%9C%20%EC%A7%84%EC%98%81%EC%9D%8D%20%EC%9E%A5%EB%93%B11%EB%A1%9C%2031%EB%B2%88%EA%B8%B8%207" target="_blank" rel="noopener" aria-label="네이버 지도 열기">
+          <img class="icon" alt="" src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/map-pin.svg">
+          <span>경남 김해시 진영읍 장등1로 31번길 7</span>
+        </a>
+
+        <div class="divider"></div>
+        <div class="muted">© AHON Lighting</div>
+      </div>
     </div>
-
-    <!-- 회사명 -->
-    <h1>AHON LIGHTING</h1>
-
-    <!-- 정보 -->
-    <div class="info">
-      경남 창원 · 김해 · 부산 전기/조명 전문<br>
-      조명 인테리어 / 전기 설비 / LED 조명 / 실링팬 / 누전
-    </div>
-
-    <!-- 아이콘 & 링크 -->
-    <div class="icons">
-      <a href="tel:01098482477">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"> 전화하기
-      </a>
-      <a href="https://open.kakao.com/o/sF2zsIoh" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/speech-bubble.png"> 카톡 문의
-      </a>
-      <a href="https://instagram.com/ahon_s2" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"> 인스타그램
-      </a>
-      <a href="https://naver.me/xrE6zXYZ" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"> 위치 확인
-      </a>
-    </div>
-
-    <!-- 푸터 -->
-    <footer>
-      © AHON LIGHTING
-    </footer>
   </div>
 </body>
 </html>
